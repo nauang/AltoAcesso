@@ -1,4 +1,7 @@
 # 📱 AltoAcesso
+Sistema de Gestão para Farmácias de Alto Custo
+
+---
 
 ## 📋 Sobre o Projeto
 
