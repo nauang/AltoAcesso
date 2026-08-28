@@ -1,8 +1,6 @@
 # 📱 AltoAcesso
 Sistema de Gestão para Farmácias de Alto Custo
 
----
-
 ## 📋 Sobre o Projeto
 
 AltoAcesso é uma plataforma web desenvolvida para digitalizar e desburocratizar o processo de solicitação e renovação de medicamentos em farmácias de alto custo do sistema público de saúde.
