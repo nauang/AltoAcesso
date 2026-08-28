@@ -7,8 +7,6 @@ AltoAcesso é uma plataforma web desenvolvida para digitalizar e desburocratizar
 
 O projeto visa eliminar a necessidade de deslocamentos presenciais à prefeitura para obtenção de protocolos de autorização, reduzindo filas, custos e tempo gasto por pacientes e seus cuidadores.
 
----
-
 ## 🎯 Problema Resolvido
 
 Atualmente, pacientes que dependem de medicamentos de alto custo enfrentam um processo burocrático que exige:
@@ -23,14 +21,10 @@ Este processo gera grande transtorno, especialmente para:
 - Pessoas com doenças crônicas debilitantes
 - Cuidadores familiares que precisam conciliar trabalho e cuidados
 
----
-
 ## 👥 Público-Alvo
 
 - **Pacientes**: Pessoas com doenças graves e crônicas, majoritariamente aposentados ou afastados pelo INSS
 - **Cuidadores**: Familiares responsáveis pelo acompanhamento do tratamento
-
----
 
 ## 🌍 Objetivos de Desenvolvimento Sustentável (ODS)
 
@@ -47,8 +41,6 @@ O projeto contribui com os seguintes ODS:
 
 - Social 🎯 – Garantia do direito à saúde, redução da vulnerabilidade socioeconômica e devolução de tempo produtivo aos cuidadores
 
----
-
 ## ✨ Funcionalidades Principais
 
 1. **Login/Acesso** – Autenticação segura com CPF e senha
@@ -58,8 +50,6 @@ O projeto contribui com os seguintes ODS:
 5. **Bot de Sugestão** – Ícone de ajuda para usuários
 6. **Tutorial de Acesso** – Guia para primeira visita
 7. **Recuperação de Senha** – Opção "Esqueci minha senha"
-
----
 
 ## 💡 Valor Gerado
 
@@ -72,8 +62,6 @@ O projeto gera:
 - ✅ Prevenção de interrupção de tratamentos por falhas operacionais
 - ✅ Devolução de tempo produtivo para cuidadores familiares
 
----
-
 ## 👨‍💻 Equipe de Desenvolvimento
 
 - Yago Feliciano de Miranda Soardi
@@ -81,8 +69,6 @@ O projeto gera:
 - Rodrigo Eiji de Paula Taniguti
 - Carlos Augusto Alves Reis
 - Miguel Cambuy Ribeiro
-
----
 
 ## 📚 Disciplina
 
