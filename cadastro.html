@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - AltoAcesso</title>
+</head>
+<body>
+    <div>
+        <span>
+            <span></span>
+            <strong>brasil.gov.br</strong>
+        </span>
+        <span>Simplificando serviços de saúde para você</span>
+    </div>
+
+    <div>
+        <span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="4" r="2"/><path d="M5 8h14M12 6v7m0 0-4 8m4-8 4 8M9 10l-4 4m10-4 4 4"/></svg>
+            Portal de Acessibilidade
+        </span>
+        <div>
+            <button>Alto Contraste</button>
+            <button>A-</button>
+            <button>A+</button>
+            <button>LIBRAS</button>
+        </div>
+    </div>
+
+    <header>
+        <div>
+            <img src="assets/logo.svg" alt="Logo AltoAcesso" class="logo-icon">
+            <div>
+                <strong>AltoAcesso</strong>
+                <span>Ministério da Saúde</span>
+            </div>
+        </div>
+        <span>Precisa de ajuda? Ligue 136</span>
+    </header>
+
+    <main class="container register-page">
+        <aside class="stepper">
+            <h2>Criação de Conta</h2>
+            <div class="step active">
+                <span>1</span>
+                <div>Dados Pessoais</div>
+            </div>
+            <div class="step-line"></div>
+            <div class="step">
+                <span>2</span>
+                <div>Endereço & Contato</div>
+            </div>
+
+            <div class="tip">
+                <strong>Dica útil</strong>
+                <p>Tenha em mãos seu RG, CPF e Cartão do SUS para preencher as informações com tranquilidade.</p>
+            </div>
+        </aside>
+
+        <form class="register-card">
+            <h1>Seus Dados Pessoais</h1>
+            <p>Preencha os campos abaixo com atenção. Letras maiores para facilitar a leitura.</p>
+
+            <div class="form-grid">
+                <div class="full">
+                    <label class="field">
+                        <span>Nome Completo</span>
+                        <input type="text" placeholder="Digite seu nome completo" required>
+                    </label>
+                </div>
+
+                <label class="field">
+                    <span>CPF</span>
+                    <input type="text" placeholder="000.000.000-00" required>
+                </label>
+
+                <label class="field">
+                    <span>E-mail</span>
+                    <input type="email" placeholder="exemplo@email.com" required>
+                </label>
+
+                <label class="field">
+                    <span>Telefone / Celular</span>
+                    <input type="tel" placeholder="(11) 90000-0000" required>
+                </label>
+
+                <label class="field">
+                    <span>Endereço Completo</span>
+                    <input type="text" placeholder="Rua, Número, Bairro, Cidade, Estado" required>
+                </label>
+
+                <div class="full">
+                    <label class="field">
+                        <span>Crie uma Senha Forte</span>
+                        <input type="password" placeholder="Mínimo 8 caracteres, números e letras" required>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="back-link">
+                    ← Voltar ao Login
+                </button>
+                <button type="submit" class="button button-primary">
+                    Prosseguir para Passo 2 →
+                </button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
