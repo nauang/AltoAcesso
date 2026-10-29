@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="noindex,nofollow" name="robots"/>
+<title>Rascunho de prescrição | AltoAcesso</title>
+<link href="../styles/variables.css" rel="stylesheet"/>
+<link href="../styles/prescricao-pdf.css" rel="stylesheet"/>
+<script defer="" src="../scripts/storage.js"></script>
+<script defer="" src="../scripts/prescricao-pdf.js"></script>
+</head>
+<body>
+<header class="document-toolbar no-print">
+<div class="toolbar-inner">
+<a class="toolbar-back" href="prescricao.html">← Voltar ao rascunho</a>
+<span>Pré-visualização do documento</span>
+<button disabled="" id="print-prescription" type="button">Imprimir / Salvar como PDF</button>
+</div>
+</header>
+<main>
+<div class="document-error no-print" hidden="" id="document-error" role="alert"></div>
+<article aria-label="Modelo do rascunho de prescrição" class="prescription-sheet" hidden="" id="prescription-document">
+<div class="doc-top-rule"></div>
+<header class="doc-heading">
+<div class="doc-brand">
+<span class="doc-brand-mark">+</span>
+<div><strong>AltoAcesso</strong><small>Medicamentos de alto custo</small></div>
+</div>
+<div class="doc-heading-meta"><span>DOCUMENTO</span><strong>RASCUNHO DE PRESCRIÇÃO</strong></div>
+</header>
+<h1>Rascunho de Prescrição</h1>
+<div class="doc-meta-row"><span><strong>Data de emissão do rascunho:</strong> <span id="pdf-saved-date"></span></span><span><strong>Referência:</strong> <span id="pdf-draft-reference"></span></span></div>
+<section class="doc-section">
+<h2>Identificação do paciente</h2>
+<div class="doc-field-grid">
+<div class="doc-field"><span>Nome completo</span><strong id="pdf-patient"></strong></div>
+<div class="doc-field"><span>CPF</span><strong id="pdf-cpf"></strong></div>
+</div>
+</section>
+<section class="doc-section">
+<h2>Medicamento e posologia</h2>
+<div class="doc-field"><span>Medicamento</span><strong id="pdf-medicine"></strong></div>
+<div class="doc-field-grid lower-fields">
+<div class="doc-field"><span>Frequência / Horário</span><strong id="pdf-frequency"></strong></div>
+<div class="doc-field"><span>Duração do tratamento</span><strong id="pdf-duration"></strong></div>
+</div>
+</section>
+<section class="doc-section doctor-section">
+<h2>Identificação do médico</h2>
+<div class="doc-field-grid">
+<div class="doc-field"><span>Nome completo</span><strong id="pdf-doctor-name"></strong></div>
+<div class="doc-field"><span>CRM / UF</span><strong id="pdf-doctor-crm"></strong></div>
+</div>
+<div class="doctor-signature-box">
+<span>Imagem de assinatura anexada ao rascunho</span>
+<img alt="Assinatura fornecida pelo médico" id="pdf-signature"/>
+<span class="doctor-signature-caption" id="pdf-doctor-signature-name"></span>
+</div>
+</section>
+<footer class="doc-footer">
+<div class="footer-line"></div>
+<span>Rascunho de prescrição. A imagem anexada não representa assinatura digital certificada.</span>
+<span>AltoAcesso · Documento gerado a partir dos dados salvos no navegador</span>
+</footer>
+</article>
+</main>
+</body>
+</html>
