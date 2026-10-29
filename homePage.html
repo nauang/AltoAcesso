@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início - AltoAcesso</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="topbar">
+        <span>
+            <strong>brasil.gov.br</strong>
+        </span>
+        <span>Simplificando serviços de saúde para você</span>
+    </div>
+
+    <div class="acessibilidade">
+        <span class="acessibilidade-titulo">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="4" r="2"/><path d="M5 8h14M12 6v7m0 0-4 8m4-8 4 8M9 10l-4 4m10-4 4 4"/></svg>
+            Portal de Acessibilidade
+        </span>
+        <div class="acessibilidade-botoes">
+            <button type="button" class="button button-outline">Alto Contraste</button>
+            <button type="button" class="button button-outline" aria-label="Diminuir fonte">A-</button>
+            <button type="button" class="button button-outline" aria-label="Aumentar fonte">A+</button>
+            <button type="button" class="button button-outline">LIBRAS</button>
+        </div>
+    </div>
+
+    <header>
+        <div class="header-content">
+            <div class="header-brand">
+                <img src="logo.svg" alt="" class="logo-icon">
+                <div class="brand-text">
+                    <strong>AltoAcesso</strong>
+                    <span>Ministério da Saúde</span>
+                </div>
+            </div>
+            <span>Precisa de ajuda? Ligue 136</span>
+        </div>
+    </header>
+
+    <main class="home-page">
+        <h1>O que você deseja fazer hoje?</h1>
+
+        <section class="acoes">
+            <article class="card">
+                <div class="card-topo">
+                    <span class="icone-circulo icone-azul">
+                        <img src="icone-novaPagina.svg" alt="">
+                    </span>
+                    <h2>Renovar Medicamento</h2>
+                </div>
+                <p>Use o código fornecido pelo médico para renovar um tratamento de alto custo existente.</p>
+                <button type="button" class="button button-primary solicitacao-link">Solicitar Renovação</button>
+            </article>
+
+            <article class="card">
+                <div class="card-topo">
+                    <span class="icone-circulo icone-verde">
+                        <img src="icone-lupa.svg" alt="">
+                    </span>
+                    <h2>Acompanhar Pedidos</h2>
+                </div>
+                <p>Verifique o status do seu laudo em análise ou o andamento dos envios dos seus medicamentos em tempo real.</p>
+                <button type="button" class="button button-green verPedidos-link">Ver Meus Pedidos</button>
+            </article>
+
+            <article class="card">
+                <div class="card-topo">
+                    <span class="icone-circulo icone-laranja">
+                        <img src="icone-sino.svg" alt="">
+                    </span>
+                    <h2>Alertas &amp; Prazos</h2>
+                </div>
+                <p>Veja quando renovar seus laudos, receitas e quando buscar seus medicamentos novamente.</p>
+                <button type="button" class="button button-secondary alertas-link">Ver Meus Prazos</button>
+            </article>
+        </section>
+
+        <section class="pedidos">
+            <div class="secao-titulo">
+                <h2>Acompanhamento de Pedidos Ativos</h2>
+                <a href="#" class="link-button verHistoricoCompleto">Ver histórico completo</a>
+            </div>
+
+            <ul class="lista-pedidos">
+                <li>
+                    <article class="cardPedidos">
+                        <span class="dot dot-azul" aria-hidden="true"></span>
+                        <div class="pedido-info">
+                            <h3>Espironolactona 100mg (Alto Custo)</h3>
+                            <p>Protocolo: #2026-883491 • Data de entrada: 12/03/2026</p>
+                        </div>
+                        <div class="pedido-acao">
+                            <span class="status status-retirada">Disponível para Retirada</span>
+                            <button type="button" class="button button-secondary detalhesPedido">Ver Onde Retirar</button>
+                        </div>
+                    </article>
+                </li>
+
+                <li>
+                    <article class="cardPedidos">
+                        <span class="dot dot-amarelo" aria-hidden="true"></span>
+                        <div class="pedido-info">
+                            <h3>Insulina Glargina 100 UI/ml (Caneta)</h3>
+                            <p>Protocolo: #2026-901248 • Data de entrada: 20/03/2026</p>
+                        </div>
+                        <div class="pedido-acao">
+                            <span class="status status-analise">Em Análise</span>
+                            <button type="button" class="button button-secondary detalhesPedido">Detalhes</button>
+                        </div>
+                    </article>
+                </li>
+
+                <li>
+                    <article class="cardPedidos">
+                        <span class="dot dot-laranja" aria-hidden="true"></span>
+                        <div class="pedido-info">
+                            <h3>Rituximabe 500mg (Injetável)</h3>
+                            <p>Protocolo: #2026-771924 • Data de entrada: 10/03/2026</p>
+                        </div>
+                        <div class="pedido-acao">
+                            <span class="status status-pendente">Pendente de Documento</span>
+                            <button type="button" class="button button-warning detalhesPedido">Ver Pendência</button>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

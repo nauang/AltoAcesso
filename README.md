@@ -68,7 +68,6 @@ O projeto gera:
 - Nauan Gomes de Lima
 - Rodrigo Eiji de Paula Taniguti
 - Carlos Augusto Alves Reis
-- Miguel Cambuy Ribeiro
 
 ## 📚 Disciplina
 

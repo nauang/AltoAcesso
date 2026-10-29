@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - AltoAcesso</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script-index.js" defer></script>
+</head>
+
+<body>
+    <div class="topbar">
+        <span>
+            <strong>brasil.gov.br</strong>
+        </span>
+        <span>Simplificando serviços de saúde para você</span>
+    </div>
+
+    <header>
+        <div class="header-content">
+            <div class="header-brand">
+                <img src="logo.svg" alt="" class="logo-icon">
+                <div class="brand-text">
+                    <strong>AltoAcesso</strong>
+                    <span>Ministério da Saúde</span>
+                </div>
+            </div>
+            <span>Precisa de ajuda? Ligue 136</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1>Seus remédios de alto custo de forma simples e rápida</h1>
+            <p>O AltoAcesso ajuda idosos, pessoas com deficiência e cuidadores a solicitar, renovar e acompanhar
+                medicamentos do Estado sem sair de casa.</p>
+
+            <div class="trust-badge">
+                <img src="icone-escudo.svg" alt="" class="trust-icon">
+                <div>
+                    <strong>Acesso Seguro com Gov.br</strong>
+                    <small>Seus dados estão protegidos pelas diretrizes nacionais.</small>
+                </div>
+            </div>
+        </section>
+
+        <form id="form-login" class="login-card" action="homepage.html" method="post">
+            <h2>Identificação do Cidadão</h2>
+            <p>Entre com seus dados cadastrados ou crie uma conta.</p>
+
+            <label>
+                <span>Número do CPF</span>
+                <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" inputmode="numeric"
+                    autocomplete="username" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" maxlength="14"
+                    aria-describedby="cpf-erro" required>
+                <small id="cpf-erro" class="mensagem-erro" aria-live="polite"></small>
+            </label>
+
+            <label>
+                <span>Sua Senha</span>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha de acesso"
+                    autocomplete="current-password" aria-describedby="senha-erro" required>
+                <small id="senha-erro" class="mensagem-erro" aria-live="polite"></small>
+            </label>
+
+            <a href="#" class="link-button">Esqueci minha senha</a>
+
+            <p id="login-aviso" class="form-feedback" role="alert"></p>
+
+            <button type="submit" id="btn-entrar" class="button button-primary">Entrar no AltoAcesso</button>
+
+            <div class="divider"><span>ou se preferir</span></div>
+
+            <a href="cadastro.html" class="button button-secondary">Primeiro Acesso / Cadastre-se</a>
+        </form>
+    </main>
+</body>
+
+</html>
