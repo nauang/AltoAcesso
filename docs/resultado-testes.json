@@ -1,0 +1,99 @@
+{
+  "checks": [
+    {
+      "teste": "login title",
+      "resultado": "OK"
+    },
+    {
+      "teste": "MVP banner login",
+      "resultado": "OK"
+    },
+    {
+      "teste": "doctor selection reveals CRM",
+      "resultado": "OK"
+    },
+    {
+      "teste": "cadastro único main e skip link",
+      "resultado": "OK"
+    },
+    {
+      "teste": "registration step 2",
+      "resultado": "OK"
+    },
+    {
+      "teste": "registration no false account",
+      "resultado": "OK"
+    },
+    {
+      "teste": "registration no stored token",
+      "resultado": "OK"
+    },
+    {
+      "teste": "renewal demo code guard",
+      "resultado": "OK"
+    },
+    {
+      "teste": "renewal expressly simulated",
+      "resultado": "OK"
+    },
+    {
+      "teste": "no audit actions for patient",
+      "resultado": "OK"
+    },
+    {
+      "teste": "audit actions disabled",
+      "resultado": "OK"
+    },
+    {
+      "teste": "no automatic prescription submit",
+      "resultado": "OK"
+    },
+    {
+      "teste": "prescription not emitted",
+      "resultado": "OK"
+    },
+    {
+      "teste": "citizen only own data example",
+      "resultado": "OK"
+    },
+    {
+      "teste": "search patient name",
+      "resultado": "OK"
+    },
+    {
+      "teste": "medical alerts patient list visible",
+      "resultado": "OK"
+    },
+    {
+      "teste": "detail opens and list hides",
+      "resultado": "OK"
+    },
+    {
+      "teste": "index.html mobile no horizontal overflow",
+      "resultado": "OK"
+    },
+    {
+      "teste": "painel.html mobile no horizontal overflow",
+      "resultado": "OK"
+    },
+    {
+      "teste": "solicitacoes.html mobile no horizontal overflow",
+      "resultado": "OK"
+    },
+    {
+      "teste": "prescricao.html mobile no horizontal overflow",
+      "resultado": "OK"
+    },
+    {
+      "teste": "alertas.html mobile no horizontal overflow",
+      "resultado": "OK"
+    },
+    {
+      "teste": "renovacao.html mobile no horizontal overflow",
+      "resultado": "OK"
+    }
+  ],
+  "falhas": [],
+  "erros": [],
+  "tipo": "Testes de DOM renderizado em ambiente de navegador isolado (sem navegação HTTP); sem testes completos por links entre páginas"
+}

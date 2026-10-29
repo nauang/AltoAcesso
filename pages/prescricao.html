@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="pt-br"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="AltoAcesso: informações e acompanhamento de medicamentos de alto custo." name="description"/><title>Rascunho de prescrição | AltoAcesso</title><link href="../styles/variables.css" rel="stylesheet"/><link href="../styles/main.css" rel="stylesheet"/><link href="../styles/adaptacoes.css" rel="stylesheet"/><script defer="" src="../scripts/storage.js"></script><script defer="" src="../scripts/main.js"></script><script defer="" src="../scripts/masks.js"></script><script defer="" src="../scripts/forms.js"></script></head><body data-page="prescricao.html"><a class="page-skip" href="#conteudo">Ir para o conteúdo</a><div class="app-shell">
+<div class="gov-bar"><div class="container gov-bar-inner">
+<span class="gov-brand"><img alt="" class="bar-pill" width="22" height="22" src="../assets/icons/pill.svg"/> AltoAcesso</span>
+<small class="gov-public-message" data-bar-public>Informações e acompanhamento em um só lugar</small>
+<a class="gov-notification" data-bar-private hidden href="solicitacoes.html" aria-label="Abrir solicitações">
+<img alt="" class="gov-notification-icon" width="17" height="17" src="../assets/icons/bell.svg"/>
+<span class="gov-notification-text" aria-live="polite">Nenhuma pendência</span>
+<span class="gov-count-badge" hidden>0</span>
+</a>
+</div></div>
+<header class="main-header"><div class="container header-inner"><a aria-label="Ir para o painel" class="logo" href="painel.html"><span class="logo-mark"><img alt="" class="icon" height="27" src="../assets/icons/heart.svg" width="27"/></span><span><strong>AltoAcesso</strong><small>MEDICAMENTOS DE ALTO CUSTO</small></span></a>
+<div class="public-header-actions" data-public=""><a class="button button-secondary" href="../index.html">Página inicial</a></div>
+<div class="account-area" data-private="" hidden=""><a class="button button-secondary home-button" href="../pages/painel.html"><img alt="" class="icon" height="20" src="../assets/icons/home.svg" width="20"/> Página inicial</a><button aria-controls="account-menu" aria-expanded="false" class="account-button" data-action="menu" type="button"><span><strong id="account-name">Antônio Carlos Souza</strong><small id="account-role">Beneficiário</small></span><span class="avatar" id="account-initials">AC</span></button>
+<div class="account-menu" hidden="" id="account-menu"><a href="../pages/painel.html">Painel</a><a data-show="doctor" href="../pages/prescricao.html">Portal de prescrição</a><a data-show="professional" href="../pages/solicitacoes.html">Gerenciar solicitações</a><button data-action="logout" type="button">Sair</button></div></div></div></header>
+<main class="prescription-page container" id="conteudo"><div class="page-heading"><div><h1>Rascunho de Prescrição</h1><p>Preencha as informações do paciente e do medicamento para conferir um rascunho.</p></div></div><form class="card prescription-card" id="prescription-form"><section><h2>1. Identificação do Paciente</h2><label class="field"><span>CPF do Paciente</span><div class="field-action"><input autocomplete="off" data-mask="cpf" id="prescription-cpf" inputmode="numeric" maxlength="14" pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}" required="" title="Informe 11 dígitos de CPF (000.000.000-00)." value="987.654.321-11"/><button class="button button-primary" data-action="find-prescription-patient" type="button">Buscar Registro</button></div></label><div class="success-note" id="prescription-patient">Informe um CPF e busque na lista disponível.</div></section>
+<section><h2>2. Medicamento &amp; Posologia</h2><label class="field"><span>Selecione o Medicamento de Alto Custo</span><select id="prescription-med"><option>Espironolactona 100mg (Comprimido)</option><option>Insulina Glargina 100 UI/ml (Caneta)</option><option>Rituximabe 500mg (Injetável)</option></select></label><div class="form-grid"><label class="field"><span>Frequência / Horário</span><input id="prescription-frequency" name="prescription-frequency" placeholder="Ex: 1 comprimido pela manhã" required="" type="text"/></label><label class="field"><span>Duração (Meses)</span><select id="prescription-duration"><option>6 meses (Laudo Excepcional)</option><option>3 meses</option><option>12 meses</option></select></label></div></section>
+<section class="signature-section">
+<h2>3. Identificação e Assinatura do Médico</h2>
+<div class="form-grid doctor-identification">
+<label class="field"><span>Nome completo do médico</span><input autocomplete="name" id="prescription-doctor-name" maxlength="120" placeholder="Nome completo" required="" type="text"/></label>
+<label class="field"><span>CRM / UF</span><input data-mask="crm" id="prescription-doctor-crm" inputmode="text" maxlength="20" placeholder="CRM-SP 12345" required="" type="text"/></label>
+</div>
+<label class="field"><span>Arquivo de imagem da assinatura</span><input accept=".png,.jpg,.jpeg,image/png,image/jpeg" aria-describedby="signature-help signature-error" id="doctor-signature-file" required="" type="file"/></label>
+<p class="signature-help" id="signature-help">Selecione uma imagem PNG ou JPG com até 300 KB.</p>
+<div class="signature-preview" hidden="" id="signature-preview">
+<img alt="Pré-visualização da assinatura anexada" id="signature-image"/>
+<div class="signature-preview-details"><strong id="signature-name"></strong><button class="button button-ghost" id="signature-remove" type="button">Remover imagem</button></div>
+</div>
+<p class="field-error" hidden="" id="signature-error" role="alert"></p>
+<label class="check-line"><input id="prescription-confirm" type="checkbox"/> Confirmo que revisei as informações do rascunho.</label>
+<button class="button button-primary submit-prescription" disabled="" id="prescription-submit" type="submit">Salvar rascunho</button>
+<div aria-live="polite" class="success-note" hidden="" id="prescription-result" role="status"></div>
+</section>
+<section class="prescription-saved" hidden="" id="prescription-saved">
+<h2>4. Rascunho salvo</h2>
+<div class="prescription-saved-grid">
+<div><small>Paciente</small><strong id="saved-prescription-patient"></strong></div>
+<div><small>CPF</small><strong id="saved-prescription-cpf"></strong></div>
+<div><small>Medicamento</small><strong id="saved-prescription-med"></strong></div>
+<div><small>Frequência / Horário</small><strong id="saved-prescription-frequency"></strong></div>
+<div><small>Duração</small><strong id="saved-prescription-duration"></strong></div>
+<div><small>Data do rascunho</small><strong id="saved-prescription-date"></strong></div>
+<div><small>Médico</small><strong id="saved-prescription-doctor"></strong></div>
+<div><small>CRM / UF</small><strong id="saved-prescription-crm"></strong></div>
+</div>
+<div class="saved-signature"><strong>Imagem da assinatura anexada</strong><img alt="Assinatura anexada ao rascunho" id="saved-signature-image"/></div>
+<div class="centre-actions prescription-pdf-actions">
+<a class="button button-primary" href="prescricao-pdf.html" id="prescription-pdf-link">Gerar PDF do rascunho</a>
+<button class="button button-secondary" id="prescription-delete" type="button">Excluir rascunho</button>
+</div>
+</section></form></main><div aria-live="polite" hidden="" id="global-msg" role="status"></div></div></body></html>

@@ -1,77 +1,104 @@
-# 📱 AltoAcesso
-Sistema de Gestão para Farmácias de Alto Custo
+# AltoAcesso
 
-## 📋 Sobre o Projeto
+**Protótipo acadêmico de uma plataforma web para acompanhamento de solicitações de medicamentos de alto custo.**
 
-AltoAcesso é uma plataforma web desenvolvida para digitalizar e desburocratizar o processo de solicitação e renovação de medicamentos em farmácias de alto custo do sistema público de saúde.
+## Sobre o projeto
 
-O projeto visa eliminar a necessidade de deslocamentos presenciais à prefeitura para obtenção de protocolos de autorização, reduzindo filas, custos e tempo gasto por pacientes e seus cuidadores.
+O AltoAcesso foi concebido para facilitar a consulta de informações, a organização de documentos e o acompanhamento de etapas relacionadas à solicitação e à renovação de medicamentos de alto custo.
 
-## 🎯 Problema Resolvido
+O projeto busca explorar soluções que, futuramente, possam contribuir para reduzir deslocamentos, filas e dificuldades enfrentadas por pacientes e cuidadores. **A versão atual é uma demonstração acadêmica de interface e fluxos de uso, não um serviço de saúde em operação.**
 
-Atualmente, pacientes que dependem de medicamentos de alto custo enfrentam um processo burocrático que exige:
+## Público-alvo
 
-- Consulta médica obrigatoriamente presencial
-- Retirada de protocolos de autorização em órgãos públicos
-- Longas filas e espera
+- **Cidadãos/pacientes:** pessoas que precisam acompanhar solicitações e renovações de medicamentos.
+- **Médicos:** profissionais que, no protótipo, podem visualizar solicitações, registrar decisões e preparar rascunhos de prescrições.
+- **Cuidadores:** pessoas que auxiliam pacientes no acompanhamento de seus processos.
 
-Este processo gera grande transtorno, especialmente para:
+## Funcionalidades do protótipo
 
-- Idosos com mobilidade reduzida
-- Pessoas com doenças crônicas debilitantes
-- Cuidadores familiares que precisam conciliar trabalho e cuidados
+- **Login demonstrativo por perfil:** cidadão com CPF e senha; médico com número do CRM e senha. A UF do CRM é informada no cadastro. O acesso é simulado e **não autentica a identidade do usuário**.
+- **Cadastro em etapas:** formulários com máscaras, campos de UF e validações no navegador.
+- **Painéis por perfil:** navegação e informações apresentadas conforme o perfil selecionado.
+- **Solicitações:** consulta, filtros por período e status e acompanhamento de registros de exemplo ou salvos localmente.
+- **Documentos:** inclusão e visualização de arquivos compatíveis com os limites de armazenamento do navegador.
+- **Análise médica demonstrativa:** aprovação, reprovação ou solicitação de correção, com atualização de status no mesmo navegador.
+- **Renovação:** fluxo demonstrativo para consultar ou iniciar uma solicitação de renovação.
+- **Prescrições:** preenchimento de rascunho, inclusão de imagem de assinatura e visualização para impressão ou salvamento em PDF pelo navegador. **Não constitui prescrição médica válida nem assinatura digital certificada.**
+- **Alertas e barra contextual:** informações e contadores de pendências por perfil, calculados a partir dos dados disponíveis localmente.
+- **Recuperação de acesso:** interface demonstrativa, sem envio real de SMS ou e-mail.
+- **Interface responsiva:** adaptação para computadores e dispositivos móveis.
 
-## 👥 Público-Alvo
+## Tecnologias utilizadas
 
-- **Pacientes**: Pessoas com doenças graves e crônicas, majoritariamente aposentados ou afastados pelo INSS
-- **Cuidadores**: Familiares responsáveis pelo acompanhamento do tratamento
+- HTML5
+- CSS3
+- JavaScript (DOM, eventos, formulários e validações)
+- `localStorage` e `sessionStorage` para simulações e armazenamento local
 
-## 🌍 Objetivos de Desenvolvimento Sustentável (ODS)
+**Não utiliza** back-end, banco de dados remoto, frameworks JavaScript nem integrações com Gov.br, SUS ou conselhos profissionais.
 
-O projeto contribui com os seguintes ODS:
+## Como executar
+
+1. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/nauang/AltoAcesso.git
+   cd AltoAcesso
+   ```
+
+2. Na pasta do projeto, inicie um servidor HTTP local:
+
+   ```bash
+   python3 -m http.server 8000
+   ```
+
+3. Abra `http://localhost:8000/` no navegador.
+
+Não há dependências a instalar nem etapa de compilação.
+
+## Estrutura principal
+
+```text
+AltoAcesso/
+├── index.html        # Entrada e login demonstrativo
+├── assets/icons/     # Ícones utilizados na interface
+├── pages/            # Telas do sistema
+├── scripts/          # Lógica JavaScript
+├── styles/           # Estilos CSS
+├── docs/             # Registros, exemplos e roteiro de testes
+└── README.md
+```
+
+## Limitações e cuidados
+
+- Os registros e anexos locais **não são compartilhados entre dispositivos** e podem ser perdidos ao limpar os dados do navegador.
+- Os perfis e as decisões sobre solicitações são **simulados**. Não há validação real de CPF, CRM, identidade ou autorização profissional.
+- Não existe emissão de protocolo oficial, integração com serviços públicos, envio de notificações remotas ou assinatura digital com validade jurídica.
+- **Utilize somente dados e documentos fictícios nos testes.** O protótipo não oferece as proteções necessárias para armazenar informações reais de saúde.
+
+## Objetivos de Desenvolvimento Sustentável (ODS)
+
+O projeto se relaciona, como proposta de impacto futuro, aos seguintes ODS:
 
 | ODS | Descrição |
-|-----|-----------|
-| **ODS 8** | Trabalho Decente e Crescimento Econômico |
-| **ODS 9** | Indústria, Inovação e Infraestrutura |
-| **ODS 16** | Paz, Justiça e Instituições Eficazes |
-| **ODS 17** | Parcerias e Meios de Implementação |
+|---|---|
+| **8** | Trabalho Decente e Crescimento Econômico |
+| **9** | Indústria, Inovação e Infraestrutura |
+| **16** | Paz, Justiça e Instituições Eficazes |
+| **17** | Parcerias e Meios de Implementação |
 
-**Tipo de Impacto**
+**Impacto social pretendido:** facilitar o acompanhamento dos processos, reduzir barreiras de acesso à informação e apoiar pacientes e cuidadores.
 
-- Social 🎯 – Garantia do direito à saúde, redução da vulnerabilidade socioeconômica e devolução de tempo produtivo aos cuidadores
-
-## ✨ Funcionalidades Principais
-
-1. **Login/Acesso** – Autenticação segura com CPF e senha
-2. **Comprovação/Renovação Online** – Atualização de cadastro sem necessidade de deslocamento
-3. **Envio de Arquivos** – Upload de documentos e laudos médicos
-4. **Menu Hamburguer** – Navegação intuitiva
-5. **Bot de Sugestão** – Ícone de ajuda para usuários
-6. **Tutorial de Acesso** – Guia para primeira visita
-7. **Recuperação de Senha** – Opção "Esqueci minha senha"
-
-## 💡 Valor Gerado
-
-O projeto gera:
-
-- ✅ Redução de deslocamentos longos e custos de transporte
-- ✅ Diminuição do tempo gasto em filas
-- ✅ Desburocratização do acesso a medicamentos
-- ✅ Alertas sobre prazos de renovação de laudos
-- ✅ Prevenção de interrupção de tratamentos por falhas operacionais
-- ✅ Devolução de tempo produtivo para cuidadores familiares
-
-## 👨‍💻 Equipe de Desenvolvimento
+## Equipe de desenvolvimento
 
 - Yago Feliciano de Miranda Soardi
 - Nauan Gomes de Lima
 - Rodrigo Eiji de Paula Taniguti
 - Carlos Augusto Alves Reis
 
-## 📚 Disciplina
+## Disciplina
 
-- **Curso**: PI: Desenvolvimento de Sistemas Web
-- **Código**: 218040
-- **Turma**: 101
-- **Professor**: Fernando Luiz de Almeida Silveira
+- **Curso:** PI: Desenvolvimento de Sistemas Web
+- **Código:** 218040
+- **Turma:** 101
+- **Professor:** Fernando Luiz de Almeida Silveira

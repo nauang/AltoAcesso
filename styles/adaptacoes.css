@@ -1,0 +1,404 @@
+/* Complementos de acessibilidade e apresentação visual, sem frameworks. */
+[hidden] { display: none !important; }
+.notice-inline { padding: 10px 13px; margin: 12px 0; border-left: 4px solid var(--warning); background: var(--warning-soft); color: #613f12; font-size: 14px; line-height: 1.5; }
+.inline-feedback { padding: 12px; margin-top: 12px; border-radius: 7px; background: var(--blue-soft); color: var(--navy); font-weight: 650; }
+.inline-feedback.error { background: var(--danger-soft); color: var(--danger); }
+.invalid { border-color: var(--danger) !important; outline-color: var(--danger); }
+.centre-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.step-panel[hidden], .role-only[hidden] { display: none!important; }
+.recovery-card form { display: grid; gap: 20px; }
+.demo-chip { display:inline-block; font-size:11px; font-weight:700; padding:4px 8px; border-radius:6px; background:var(--warning-soft); color:#68420b; vertical-align:middle; }
+.signup-summary { margin-top:12px; }
+.orders-empty { padding:18px; }
+.icon { vertical-align: middle; }
+.app-shell { min-height:100vh; }
+.form-actions .button { max-width: 100%; }
+.main-header .container { gap: 12px; }
+.small-btn { font-size: 13px; }
+#global-msg:not([hidden]) { position:fixed; bottom:18px; right:18px; z-index:200; padding:17px 20px; max-width: min(440px,calc(100vw - 24px)); box-shadow:0 8px 26px #0003; border-radius:8px; color:var(--navy); background:#fff; border-left:5px solid var(--green); }
+.page-skip { position:absolute; top:-200px; left:10px; z-index:9999; background:white; padding:12px; }
+.page-skip:focus { top:5px; }
+@media (max-width:600px) { .table-card { overflow-x:auto; } .doctor-login-fields { display:grid; } .notice-inline { font-size:13px; } .main-header .logo small { font-size:9px; } }
+/* Ajustes após retirar React: links estilizados como botões, ícones e foco. */
+.logo { text-decoration: none; }
+.icon { object-fit: contain; }
+.logo-mark .icon, .guide-icon .icon { filter: brightness(0) invert(1); }
+.account-menu a { display:block; padding:11px 12px; text-align:left; border:0; border-radius:7px; background:#fff; color:var(--navy); font-weight:650; text-decoration:none; }
+.account-menu a:hover,.account-menu button:hover { background:var(--blue-soft); }
+a.button { text-decoration:none; }
+a.button:focus-visible, a.back-link:focus-visible, .account-menu a:focus-visible { outline:3px solid #75a8dc; outline-offset:2px; }
+#login-feedback[hidden] { display:none; }
+.notice-inline { border-radius:6px; }
+.photo-placeholder { width:100%; min-height:350px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; background:linear-gradient(145deg,#dce7ef,#9ebccc); color:var(--navy-dark); padding:24px; font-weight:700; }
+.photo-placeholder small { font-weight:normal; font-size:12px; margin-top:8px; }
+.visually-hidden { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; }
+#renewal-summary-holder[hidden] { display:none; }
+#patients-list[hidden] { display:none; }
+.doc-blank {background:#f7f9fb;}
+button:disabled {cursor:not-allowed;opacity:.55}
+
+/* Estilos de confirmação de formulário e controles indisponíveis. */
+.registration-success { padding: 36px; width: min(700px, 100%); margin: 36px auto; }
+.registration-success h2 { color: var(--navy); margin-top: 0; }
+.registration-success p { line-height: 1.6; }
+.auditor-card button:disabled, .auditor-card textarea:disabled { opacity: .5; cursor: not-allowed; }
+@media(max-width:600px) { .registration-success { padding: 20px; } }
+
+/* Arquivos e solicitações mantidos no armazenamento do navegador. */
+.renewal-upload { margin-top: 20px; }
+.renewal-upload input[type="file"], .saved-upload-form input[type="file"] {
+  display: block; height: auto; min-height: 48px; width: 100%; padding: 10px;
+}
+.renewal-upload small { color: var(--muted); }
+.saved-request-documents { padding: 24px; margin-top: 18px; }
+.saved-request-documents h2 { color: var(--navy); margin: 0 0 18px; }
+.saved-request-details { display: grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap: 15px; margin: 0 0 28px; }
+.saved-request-details dt { font-size: 13px; color: var(--muted); }
+.saved-request-details dd { margin: 5px 0 0; font-weight: 700; overflow-wrap: anywhere; }
+.saved-upload-form { display: grid; gap: 12px; margin-top: 22px; }
+.saved-upload-form .button { justify-self: start; }
+.stored-document-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 13px 0; border-bottom: 1px solid var(--line); }
+.stored-document-row strong { flex: 1 1 160px; overflow-wrap: anywhere; }
+.stored-document-row small { color: var(--muted); }
+.stored-document-preview { width: 100%; max-height: 360px; object-fit: contain; border-radius: 8px; background: #f7f9fb; }
+.local-orders:empty { display: none; }
+#requests-tbody td:last-child { white-space: normal; }
+#requests-tbody td:last-child .small-btn { margin-left: 6px; }
+@media (max-width: 600px) {
+  .saved-request-documents { padding: 15px; }
+  .stored-document-row .button { flex: 1 1 auto; }
+}
+
+.has-local-request .documents-grid { display: grid; }
+.has-local-request .medical-document { display: none; }
+.review-status { color:var(--navy); font-weight:700; margin: 0 0 18px; }
+.review-reason { padding:12px; border-radius:7px; background:var(--warning-soft); color:#573d15; line-height:1.5; overflow-wrap:anywhere; }
+.review-date { display:block; color:var(--muted); margin-top:10px; }
+@media(max-width: 820px) { .has-local-request .documents-grid {grid-template-columns:1fr;} }
+
+
+.detail-status-summary {margin:18px 0 0; padding:12px; background:var(--blue-soft); color:var(--navy-dark);border-radius:7px;font-weight:650;line-height:1.5;overflow-wrap:anywhere;}
+
+/* Motivos e observações em solicitações, sem modificar o layout geral. */
+.review-note {display:block;margin-top:7px;font-size:12px;line-height:1.45;color:var(--muted);overflow-wrap:anywhere;white-space:normal;}
+.status + .review-note {max-width:260px;}
+
+
+/* Upload e visualização de assinatura anexada ao rascunho. */
+.signature-section .field input[type="file"] { height:auto; min-height:54px; padding:13px 15px; max-width:100%; }
+.signature-help { margin:8px 0 12px; font-size:14px; color:var(--muted); }
+.signature-preview { margin:16px 0; padding:18px; border:1px solid var(--line); border-radius:var(--radius); background:var(--blue-soft); }
+.signature-preview img { display:block; max-width:100%; width:auto; height:auto; max-height:145px; object-fit:contain; margin:0 0 12px; background:white; border-radius:6px; }
+.signature-preview-details { display:flex; flex-wrap:wrap; align-items:center; gap:12px; justify-content:space-between; }
+.signature-preview-details strong { overflow-wrap:anywhere; }
+.prescription-saved-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin-bottom:22px; }
+.prescription-saved-grid div { border:1px solid var(--line); border-radius:7px; background:var(--canvas); padding:12px 16px; }
+.prescription-saved-grid small, .prescription-saved-grid strong { display:block; overflow-wrap:anywhere; }
+.prescription-saved-grid small { color:var(--muted); margin-bottom:4px; }
+.prescription-saved-grid strong { color:var(--navy); }
+.saved-signature { margin-bottom:20px; display:flex; flex-direction:column; align-items:flex-start; gap:12px; }
+.saved-signature img { display:block; max-width:100%; width:auto; max-height:150px; padding:12px; background:white; border:1px solid var(--line); border-radius:7px; object-fit:contain; }
+@media (max-width:560px) { .prescription-saved-grid { grid-template-columns:1fr; } }
+
+/* Filtros de solicitações: títulos alinhados no topo e todos os controles
+   na mesma linha. O período conserva os calendários nativos do HTML. */
+.filters {
+  grid-template-columns: minmax(0, 1fr) minmax(0, .8fr) minmax(0, 1.65fr) auto;
+  align-items: start;
+}
+.filters > label {
+  display: grid;
+  grid-template-rows: 20px 54px;
+  gap: 24px;
+  min-width: 0;
+}
+.filters > label > span {
+  line-height: 20px;
+}
+.filters > label > select,
+.filters > label > .input-icon {
+  width: 100%;
+  height: 54px;
+}
+.filters .date-filter {
+  display: block;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+.filters .date-filter legend {
+  padding: 0;
+  margin: 0 0 6px;
+  color: #111;
+  font-weight: 700;
+  line-height: 20px;
+}
+.date-filter-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.date-filter-fields label {
+  min-width: 0;
+  display: grid;
+  grid-template-rows: 14px 54px;
+  gap: 4px;
+}
+.date-filter-fields label span {
+  font-size: 13px;
+  line-height: 14px;
+  color: var(--muted);
+  font-weight: 600;
+}
+.filters .date-filter input[type="date"] {
+  width: 100%;
+  min-width: 0;
+  height: 54px;
+  padding: 0 8px;
+  border: 1px solid #bcc8d2;
+  border-radius: 7px;
+  background: #fff;
+  color: #20242a;
+  font: inherit;
+  font-size: 14px;
+}
+.filters .date-filter input[type="date"]:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 2px;
+}
+.date-filter-help {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 18px;
+  margin-top: 4px;
+}
+.date-filter-help small { color: #b42a35; }
+.date-filter-help .clear-dates {
+  margin-left: auto;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--navy);
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 12px;
+}
+.date-filter-help .clear-dates:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 3px;
+}
+.filters > [data-action="request-filter"] {
+  margin-top: 44px;
+  height: 54px;
+  min-height: 54px;
+}
+@media (max-width: 1100px) {
+  .filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .filters .date-filter { grid-column: 1 / -1; }
+  .filters > [data-action="request-filter"] {
+    grid-column: 1 / -1;
+    margin-top: 0;
+    height: 46px;
+    min-height: 46px;
+    justify-self: end;
+  }
+}
+@media (max-width: 600px) {
+  .filters { grid-template-columns: 1fr; }
+  .filters > label { grid-template-rows: auto 54px; gap: 8px; }
+  .filters .date-filter { grid-column: 1; }
+  .filters > [data-action="request-filter"] {
+    grid-column: 1;
+    justify-self: stretch;
+    margin-top: 0;
+  }
+}
+@media (max-width: 380px) {
+  .date-filter-fields { grid-template-columns: 1fr; }
+}
+
+/* Revisão responsiva — correções de layout mobile e tabelas. */
+/* Permite que itens do grid e flex encolham sem alargar a página. */
+.login-page > *, .register-page > *, .documents-grid > *,
+.action-grid > *, .filters > *, .field-action > *,
+.deadline-title > *, .medicine-card-title > * { min-width: 0; }
+.field input, .field select, .filters input, .filters select { max-width: 100%; }
+.order strong, .order small, .medicine-card-title h2,
+.deadline-title h2, .patient strong { overflow-wrap: anywhere; }
+/* Espaço entre a identificação do médico e o campo de assinatura. */
+.signature-section > .doctor-identification + .field { margin-top: 22px; }
+/* Rolagem horizontal somente na área de tabela, com indicação no celular. */
+.table-card { max-width: 100%; }
+.table-card:focus-visible { outline: 3px solid #75a8dc; outline-offset: 3px; }
+.table-scroll-hint { display: none; color: var(--muted); font-size: 13px; margin: 14px 0 -12px; }
+@media (max-width: 900px) {
+  .table-scroll-hint { display: flex; align-items: center; gap: 8px; }
+  .table-card { overflow-x: auto; overscroll-behavior-x: contain; }
+}
+@media (max-width: 600px) {
+  .deadline-card, .patient-medicine-card { padding: 18px; }
+  .deadline-title, .medicine-card-title {
+    grid-template-columns: 40px minmax(0,1fr);
+    align-items: start; column-gap: 12px; row-gap: 8px;
+  }
+  .deadline-title .round-icon, .medicine-card-title .round-icon {
+    width: 40px; height: 40px; margin: 0;
+  }
+  .deadline-title > .status, .medicine-card-title > .status {
+    grid-column: 2; justify-self: start; margin: 0;
+    max-width: 100%; white-space: normal;
+  }
+  .deadline-title h2, .medicine-card-title h2 { font-size: 18px; line-height: 1.25; }
+  .deadline-details { padding: 16px; gap: 16px; }
+  .deadline-details strong { overflow-wrap: anywhere; }
+  .renewal-summary strong { overflow-wrap: anywhere; }
+  .document-heading { flex-wrap: wrap; gap: 10px; }
+}
+@media (max-width: 520px) {
+  .renewal-summary { grid-template-columns: 1fr; }
+  .renewal-summary div, .renewal-summary div:nth-child(3n),
+  .renewal-summary div:nth-child(even), .renewal-summary div:nth-last-child(-n+3) {
+    border-right: 0; border-bottom: 1px solid var(--line);
+  }
+  .renewal-summary div:last-child { border-bottom: 0; }
+}
+/* Cabeçalho compacto para telefones estreitos: preserva navegação sem overflow. */
+@media (max-width: 440px) {
+  .container { width: calc(100% - 24px); }
+  .header-inner { gap: 8px; }
+  .header-inner .logo { min-width: 0; flex: 1 1 auto; gap: 7px; }
+  .header-inner .logo-mark { width: 34px; height: 34px; flex: 0 0 34px; }
+  .header-inner .logo strong { font-size: 18px; letter-spacing: -.45px; }
+  .header-inner .logo small { font-size: 8px; line-height: 1.15; }
+  .header-inner .account-area { flex: 0 0 auto; gap: 7px; }
+  .header-inner .home-button {
+    width: 38px; height: 38px; padding: 7px;
+    min-height: 38px; font-size: 0; white-space: nowrap;
+  }
+  .header-inner .home-button .icon { width: 20px; height: 20px; }
+  .header-inner .account-button { padding: 0; }
+  .header-inner .avatar { width: 36px; height: 36px; }
+  .header-inner .account-menu { width: min(220px, calc(100vw - 24px)); }
+}
+
+
+/* Estados e UF do CRM: menus com rolagem vertical controlada.
+   Mantém o select original para valores e validação do formulário. */
+.uf-picker { position: relative; width: 100%; min-width: 0; }
+.uf-picker .uf-source {
+  position: absolute; width: 1px; height: 1px; padding: 0;
+  opacity: 0; overflow: hidden; pointer-events: none;
+  clip-path: inset(50%);
+}
+.uf-picker-trigger {
+  width: 100%; height: 54px; min-width: 0;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 10px; padding: 0 15px;
+  background: #fff; border: 1px solid #bcc8d2; border-radius: 7px;
+  color: #20242a; cursor: pointer; text-align: left; font: inherit;
+}
+.uf-picker-trigger .uf-picker-value { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.uf-picker-trigger::after {
+  content: ''; flex: 0 0 7px; width: 7px; height: 7px;
+  border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translateY(-2px); margin-right: 4px;
+}
+.uf-picker-trigger:hover { border-color: #8099b8; }
+.uf-picker-trigger:focus-visible,
+.uf-picker-trigger[aria-expanded="true"] { outline: 3px solid #75a8dc; outline-offset: 2px; border-color: var(--navy); }
+.uf-picker-trigger.invalid { border-color: #b42a35; }
+.uf-picker-list {
+  position: fixed; z-index: 9999; box-sizing: border-box;
+  padding: 5px; margin: 0; min-width: 0;
+  border-radius: 8px; border: 1px solid #b7c5d7;
+  background: #fff; box-shadow: 0 12px 30px #152c4a30;
+  overflow-y: auto; overflow-x: hidden;
+  overscroll-behavior-y: contain; -webkit-overflow-scrolling: touch;
+  scrollbar-width: auto; scrollbar-color: #879bb5 #edf1f7;
+}
+.uf-picker-list[hidden] { display: none !important; }
+.uf-picker-option {
+  display: block; width: 100%; min-height: 38px;
+  padding: 9px 12px; border: 0; border-radius: 5px;
+  background: transparent; color: #172033;
+  font: inherit; text-align: left; cursor: pointer; white-space: normal;
+}
+.uf-picker-option:hover, .uf-picker-option:focus-visible {
+  background: #eaf3fb; outline: 2px solid transparent;
+}
+.uf-picker-option[aria-selected="true"] { background: #dcecfb; color: var(--navy-dark); font-weight: 700; }
+
+/* O CRM médico ocupa a largura disponível no login; a senha é um campo comum aos dois perfis. */
+.login-card .doctor-login-fields { grid-template-columns: minmax(0, 1fr); }
+
+/* Login simplificado: identificação (CPF ou CRM) e senha. */
+#login-form .doctor-login-fields { grid-template-columns: minmax(0,1fr); }
+#login-form [data-login-patient-fields],
+#login-form [data-doctor-fields] { min-width: 0; }
+
+
+/* Barra superior com função conforme o perfil — HTML/CSS/JS sem dependências. */
+.gov-bar .gov-bar-inner {
+  min-height: 42px;
+  height: auto;
+  padding-block: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.gov-bar .gov-brand {
+  white-space: nowrap;
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+}
+.gov-bar .gov-public-message { color: #eef4fb; opacity: .9; font-size: 12px; }
+.gov-bar .gov-notification {
+  min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+}
+.gov-bar .gov-notification:hover { background: rgba(255,255,255,.14); }
+.gov-bar .gov-notification:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.gov-bar .gov-notification-icon { flex: 0 0 17px; filter: brightness(0) invert(1); }
+.gov-bar .gov-notification.has-pending .gov-notification-icon { filter: brightness(0) saturate(100%) invert(82%) sepia(55%) saturate(597%) hue-rotate(356deg) brightness(101%) contrast(100%); }
+.gov-bar .gov-notification-text { display: inline; white-space: normal; text-align: right; }
+.gov-bar .gov-count-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  background: #fff;
+  border-radius: 9px;
+  color: #173861;
+  font-size: 11px;
+  font-weight: 800;
+}
+.gov-bar [hidden] { display: none !important; }
+@media (max-width: 900px) {
+  .gov-bar .gov-public-message { display: block; }
+}
+@media (max-width: 430px) {
+  .gov-bar .gov-bar-inner { gap: 6px; }
+  .gov-bar .gov-brand { font-size: 12px; gap: 5px; }
+  .gov-bar .gov-brand .bar-pill { width: 18px; height: 18px; }
+  .gov-bar .gov-public-message { font-size: 10px; text-align: right; line-height: 1.25; }
+  .gov-bar .gov-notification { font-size: 11px; padding: 5px 2px; gap: 5px; }
+  .gov-bar .gov-notification-icon { width: 15px; height: 15px; flex-basis: 15px; }
+}
